@@ -1,0 +1,32 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    env_file:
+      - .env
+
+  backend:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    depends_on:
+      - postgres
+    volumes:
+      - ./backend:/app
+    env_file:
+      - .env
+
+  postgres:
+    image: postgres:13-alpine
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
