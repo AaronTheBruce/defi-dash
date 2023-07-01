@@ -14,7 +14,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ items }) => {
   return (
-    <div className="bg-gray-800 text-white w-32 flex flex-col h-screen">
+    <div className="bg-gray-800 text-white w-32 flex flex-col h-screen absolute">
       <div className="flex-grow">
         <ul className="p-4">
           {items.map((item) => (

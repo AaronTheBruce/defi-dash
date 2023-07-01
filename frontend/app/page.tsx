@@ -1,13 +1,14 @@
 import 'server-only';
-import Dashboard from './home/page';
-import Sidebar from './home/sidebar/page';
-import { options } from './home/sidebar/options';
+import Sidebar from './sidebar/page';
+import { options } from './sidebar/options';
 
 export default function Home() {
   return (
     <>
       <Sidebar items={options} />
-      <Dashboard />
+      <div className='pl-32'>
+        Main Page
+      </div>
     </>
   )
 }
