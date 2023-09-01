@@ -1,13 +1,14 @@
 import 'server-only';
-import Dashboard from './home/page';
-import Sidebar from './home/sidebar/page';
-import { options } from './home/sidebar/options';
+import Sidebar from '../components/sidebar/Sidebar';
+import { options } from '../components/sidebar/options';
 
-export default function Home() {
+export default function App() {
+
+
   return (
     <>
       <Sidebar items={options} />
-      <Dashboard />
+      <div className='ml-32'>App</div>
     </>
   )
 }

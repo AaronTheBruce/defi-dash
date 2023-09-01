@@ -1,16 +1,16 @@
 "use client"
 import React from 'react';
-import Home from '@/pages/home/home';
+import Defi from '@/pages/defi/defi';
 import Sidebar from '@/components/sidebar/Sidebar';
 import { options } from '@/components/sidebar/options';
 
-const HomeApp = () => {
+const DeFiApp = () => {
   return (
     <>
-    <Sidebar items={options} />
-    <Home />
+        <Sidebar items={options} />
+        <Defi />
     </>
   )
 }
 
-export default HomeApp
+export default DeFiApp
